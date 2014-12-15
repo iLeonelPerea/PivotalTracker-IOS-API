@@ -1,0 +1,18 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'PivotalTracker-IOS-API', :exclusive => true do
+  pod "PivotalTracker-IOS-API", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "PivotalTracker-IOS-API", :path => "../"
+
+  #https://github.com/specta/specta
+  pod 'Specta', '~> 0.2.1'
+  #https://github.com/specta/expecta/
+  pod 'Expecta'
+  #https://github.com/facebook/ios-snapshot-test-case
+  pod 'FBSnapshotTestCase'
+  #https://github.com/dblock/ios-snapshot-test-case-expecta
+  pod 'Expecta+Snapshots'
+end
