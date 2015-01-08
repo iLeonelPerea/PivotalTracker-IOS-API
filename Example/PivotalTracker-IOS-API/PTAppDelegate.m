@@ -15,15 +15,200 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     Configuration *sharedManager = [Configuration sharedManager];
-    sharedManager.pivotalTrackerAPIToken = @"PIVOTAL_API_TOKEN";
-    sharedManager.userName = @"USER_NAME";
-    sharedManager.userPassword = @"USER_PASSWORD";
+    sharedManager.pivotalTrackerAPIToken = @"4175aa1a1eae67ea8a6a89e3fd5f6aae";
+    sharedManager.userName = @"ileonelperea";
+    sharedManager.userPassword = @"@Pivotaltracker_Leo.87";
     
     __block NSDictionary * results;
+    
+    // ----- ACCOUNT ENDPOINT -----
+    //  account stufs id -> 715874
+    /*
+    [RESTManager getAccount:715874 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getAccount done");
+    }];
+     */
+    
+    // ----- ACCOUNT MEMBERSHIPS ENDPOINT -----
+    /*
+    [RESTManager getAccountMemberships:715874 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getAccountMemberships done");
+    }];
+    
+    Id account omar -> 1431836
+     *Falta crear un nuevo usuario y agregarlo
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"YYYY'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
+        [dateFormat setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    
+        NSDate *date = [dateFormat dateFromString:@"2014-12-28T21:54:27Z"];
+    
+        NSTimeInterval seconds = [date timeIntervalSince1970];
+        double milliseconds = seconds*1000;
+    
+        //Reparar error milisegundo o de timepo
+        [RESTManager postAccountMemberships:715874 withPersonId:1431836 withEmail:nil withName:nil withInitials:nil withCreated_at:milliseconds withAdmin:YES withProject_creator:YES withTimekeeper:YES withTimeEntered:YES toCallback:^(id result) {
+            results = result;
+            NSLog(@"postAccountMemberships done");
+        }];
+    
+    [RESTManager getIndividualAccountMembership:715874 withPersonId:1431836 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getIndividualAccountMembership done");
+     }];
+     
+    [RESTManager putIndividualAccountMembership:715874 withPersonId:1431836 withAdmin:YES withProjectCreator:NO withTimeKeeper:NO withTimeEntered:nil toCallback:^(id result) {
+        results = result;
+        NSLog(@"putIndividualAccountMembership done");
+     }];
+    
+    [RESTManager deleteIndividualAccountMembership:715874 withPersonId:1431836 toCallback:^(id result) {
+        results = result;
+        NSLog(@"deleteIndividualAccountMembership done");
+     }];
+     */
+    
+    // ----- ACCOUNTS ENDPOINT -----
+    /*
+    [RESTManager getAccounts:^(id result) {
+        results = result;
+        NSLog(@"getAccounts done");
+    }];
+     
+    [RESTManager getAccountSumaries:PROJECT_CREATION toCallback:^(id result) {
+        results = result;
+        NSLog(@"getAccounts done");
+    }];
+     */
+
+    // ----- ACTIVITY ENDPOINT -----
+    /*
+    [RESTManager getActivity:5 withOffset:2 withOccurredBefore:nil withOccurredAfter:nil toCallback:^(id result) {
+        results = result;
+        NSLog(@"getActivity done");
+    }];
+    */
+    
+    /*
+    [RESTManager getProjectActivity:1192970 withLimit:5 withOffset:2 withOccurredBefore:nil withOccurredAfter:nil andSinceVersion:200 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getProjectActivity done");
+    }];
+    */
+    
+    /*
+    [RESTManager getProjectStoryActivity:1192970 withStoryId:84961662 withLimit:5 withOffset:2 withOccurredBefore:nil withOccurredAfter:nil andSinceVersion:200 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getProjectStoryActivity done");
+    }];
+     */
+    
+    /*
+    [RESTManager getProjectEpicActivity:1233334 withEpicId:1589974 withLimit:nil withOffset:nil withOccurredBefore:nil withOccurredAfter:nil andSinceVersion:nil toCallback:^(id result) {
+        results = result;
+        NSLog(@"getProjectStoryActivity done");
+    }];
+     */
+    
+    // ----- ATTACHMENT ENDPOINT -----
+    //coomentId -> 88500872
+    /*
+    [RESTManager deleteFileAttachment:1233334 withStoryId:85294376 withCommentId:<#(int)#> andFileAttachmentId:<#(int)#> toCallback:<#^(id)callback#>  toCallback:^(id result) {
+        results = result;
+        NSLog(@"getProjectStoryActivity done");
+    }];*/
+    
+    // ----- COMMENTS ENDPOINT -----
+    /*
+    [RESTManager getProjectStoryComments:1233334 withStoryId:85294376 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getProjectStoryComments done");
+    }];
+    */
+    
+    /*
+    [RESTManager postProjectStoryComments:1233334 withStoryId:85294376 withText:@"Este es un comentario" withFileAttachment:nil withGoogleAttachments:nil withCommitIdentifier:nil withCommitType:nil andPersonId:1431832 toCallback:^(id result) {
+        results = result;
+        NSLog(@"postProjectStoryComments done");
+    }];
+    */
+    //88502300
+    /*
+    [RESTManager deleteProjectStoryComment:1233334 withStoryId:85294376 andCommentId:88502300 toCallback:^(id result) {
+        results = result;
+        NSLog(@"deleteProjectStoryComment done");
+    }];
+    */
+    
+    /*
+    [RESTManager getProjectStoryComment:1233334 withStoryId:85294376 andCommentId:88502300 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getProjectStoryComment done");
+    }];
+    */
+    
+    /*
+    [RESTManager putProjectStoryComment:1233334 withStoryId:85294376 withCommentId:88502300 andText:@"this us a update of a comment" toCallback:^(id result) {
+        results = result;
+        NSLog(@"putProjectStoryComment done");
+    }];
+    */
+    
+    /*
+    [RESTManager getProjectEpicComments:1233334 withEpicId:1589974 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getProjectEpicComments done");
+    }];
+     */
+    
+    // ----- EPIC ENDPOINT -----
+    /*
+    [RESTManager getProjectEpic:1233334 andEpicId:1589974 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getProjectEpic done");
+    }];
+     */
+    
+    /*
+    [RESTManager putProjectEpic:1233334 withEpicId:1589974 withFollowerIds:nil withName:nil withLabel:nil withLabelId:nil withDescription:@"Description of a epic" withAfterId:nil andBeforeId:nil toCallback:^(id result) {
+        results = result;
+        NSLog(@"putProjectEpic done");
+    }];
+     */
+    
+    /*
+    [RESTManager deleteProjectEpic:1233334 andEpicId:1589974 toCallback:^(id result) {
+        results = result;
+        NSLog(@"deleteProjectEpic done");
+    }];
+     */
+    
+    /*
+    [RESTManager getEpic:1589974 toCallback:^(id result) {
+        results = result;
+        NSLog(@"getEpic done");
+    }];
+    */
+    
+    // ----- EPICS ENDPOINT -----
+    [RESTManager getProjectEpics:1233334 andFilter:nil toCallback:^(id result) {
+        results = result;
+        NSLog(@"getProjectEpics done");
+    }];
+    
+    // ----- ME ENDPOINT -----
+    /*
     [RESTManager getMe: ^(id result) {
         results = result;
-        NSLog(@"done");
+        NSLog(@"getMe done");
     }];
+    */
+
+    
+
+    
     return YES;
 }
 
