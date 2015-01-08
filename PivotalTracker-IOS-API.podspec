@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PivotalTracker-IOS-API"
-  s.version          = "pivotal-api-v0.1.0"
+  s.version          = "0.1.0"
   s.summary          = "Make Call to Privotal Tracker API V5."
   s.description      = <<-DESC
                        Use this framework to do make call at Pivotal Tracker Api V5.
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Leonel Perea" => "iticleonel.len@gmail.com" }
-  s.source           = { :git => "https://github.com/iLeonelPerea/PivotalTracker-IOS-API.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/iLeonelPerea/PivotalTracker-IOS-API.git", :tag => "pivotal-api-v0.1.0" }
   s.social_media_url = 'https://twitter.com/ileonelperea'
 
   s.platform     = :ios, '7.0'
