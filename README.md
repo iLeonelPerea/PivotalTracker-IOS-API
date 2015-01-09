@@ -1,6 +1,6 @@
 # PivotalTracker-IOS-API
 
-[![CI Status](http://img.shields.io/travis/Leonel Perea/PivotalTracker-IOS-API.svg?style=flat)](https://travis-ci.org/Leonel Perea/PivotalTracker-IOS-API)
+[![CI Status](http://img.shields.io/travis/iLeonelPerea/PivotalTracker-IOS-API.svg?style=flat)](https://travis-ci.org/Leonel Perea/PivotalTracker-IOS-API)
 [![Version](https://img.shields.io/cocoapods/v/PivotalTracker-IOS-API.svg?style=flat)](http://cocoadocs.org/docsets/PivotalTracker-IOS-API)
 [![License](https://img.shields.io/cocoapods/l/PivotalTracker-IOS-API.svg?style=flat)](http://cocoadocs.org/docsets/PivotalTracker-IOS-API)
 [![Platform](https://img.shields.io/cocoapods/p/PivotalTracker-IOS-API.svg?style=flat)](http://cocoadocs.org/docsets/PivotalTracker-IOS-API)
