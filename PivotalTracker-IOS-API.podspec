@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/ileonelperea/PivotalTracker-IOS-API"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Leonel Perea" => "iticleonel.len@gmail.com" }
+  s.author           = { "iLeonelPerea" => "iticleonel.len@gmail.com" }
   s.source           = { :git => "https://github.com/iLeonelPerea/PivotalTracker-IOS-API.git", :tag => "pivotal-api-v0.1.0" }
   s.social_media_url = 'https://twitter.com/ileonelperea'
 
